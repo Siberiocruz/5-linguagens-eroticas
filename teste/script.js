@@ -32,6 +32,48 @@ function handleCaptureSubmit(e) {
 
     console.log('Dados capturados:', userData);
 
+    // Enviar para Google Apps Script e Formspree
+    const dataToSend = {
+        full_name: userData.fullName,
+        whatsapp: userData.whatsapp,
+        email: userData.email
+    };
+
+    // Enviar para Google Apps Script (planilha)
+    fetch('https://script.google.com/macros/d/1fT6htSHcquAeAN-WRYs8ONgdIsFoy8-aMz1h33R7N3s/usercontent', {
+        method: 'POST',
+        body: JSON.stringify(dataToSend),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(response => {
+        console.log('Dados enviados para Google Sheets:', response.status);
+    }).catch(error => {
+        console.error('Erro ao enviar para Google Sheets:', error);
+    });
+
+    // Enviar para Formspree (email)
+    const formData = new FormData();
+    formData.append('full_name', userData.fullName);
+    formData.append('whatsapp', userData.whatsapp);
+    formData.append('email', userData.email);
+
+    fetch('https://formspree.io/f/xyzgwpwk', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        console.log('Dados enviados para Formspree:', response.status);
+        showQuiz();
+    }).catch(error => {
+        console.error('Erro ao enviar para Formspree:', error);
+        showQuiz();
+    });
+}
+
+function showQuiz() {
     // Esconder seção de captura
     const captureSection = document.querySelector('.capture-section');
     if (captureSection) {
@@ -49,7 +91,10 @@ function handleCaptureSubmit(e) {
 
     // Scroll para quiz
     setTimeout(() => {
-        quizContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const quizContainer = document.getElementById('quiz-container');
+        if (quizContainer) {
+            quizContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     }, 100);
 }
 
