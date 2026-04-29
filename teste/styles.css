@@ -1004,3 +1004,134 @@ body {
         font-size: 1.5rem;
     }
 }
+
+
+/* ============================================
+   FORMULÁRIO DE CAPTURA
+   ============================================ */
+.capture-form-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a2332 100%);
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.capture-form-container {
+    background: var(--bg-white);
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 500px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+
+.capture-form-container h2 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.capture-form-container > p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1.05em;
+}
+
+.capture-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"] {
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="email"]:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.form-group.checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--secondary-color);
+}
+
+.form-group.checkbox label {
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.btn-start-quiz {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #f4d03f 100%);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.btn-start-quiz:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+}
+
+.btn-start-quiz:active {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+    .capture-form-container {
+        padding: 30px 20px;
+    }
+
+    .capture-form-container h2 {
+        font-size: 1.5em;
+    }
+
+    .capture-form-container > p {
+        font-size: 0.95em;
+    }
+}
