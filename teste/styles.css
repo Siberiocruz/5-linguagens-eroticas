@@ -31,10 +31,23 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
     background-color: var(--bg-light);
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
 }
 
 .container {
@@ -93,16 +106,63 @@ body {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 40px;
     align-items: center;
 }
 
+/* Desktop: texto em cima da foto, centralizado */
+@media (min-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    .hero-content {
+        grid-row: 1;
+        text-align: center;
+        order: -1;
+    }
+    
+    .hero-image {
+        grid-row: 2;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile: layout padrão, centralizado */
+@media (max-width: 1023px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-image {
+        margin-top: 30px;
+    }
+}
+
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 10px;
     line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
 }
 
 .hero-subtitle {
@@ -121,12 +181,15 @@ body {
 .value-list {
     list-style: none;
     margin-bottom: 20px;
+    padding-left: 0;
 }
 
 .value-list li {
     margin-bottom: 12px;
     font-size: 1rem;
     line-height: 1.5;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .hero-description {
@@ -278,21 +341,26 @@ body {
 }
 
 .language-signs ul,
-.language-block ul {
+.language-block ul,
+.result-content ul {
     list-style: none;
     padding-left: 0;
+    margin-left: 0;
 }
 
 .language-signs li,
-.language-block li {
+.language-block li,
+.result-content ul li {
     margin-bottom: 10px;
-    padding-left: 25px;
+    padding-left: 0;
+    margin-left: 0;
     position: relative;
     line-height: 1.6;
 }
 
 .language-signs li:before,
-.language-block li:before {
+.language-block li:before,
+.result-content ul li:before {
     content: "✓";
     position: absolute;
     left: 0;
