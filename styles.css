@@ -98,6 +98,41 @@ body {
     align-items: center;
 }
 
+/* Desktop: texto em cima da foto, centralizado */
+@media (min-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    .hero-content {
+        grid-row: 1;
+        text-align: center;
+        order: -1;
+    }
+    
+    .hero-image {
+        grid-row: 2;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile: layout padrão */
+@media (max-width: 1023px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-image {
+        margin-top: 30px;
+    }
+}
+
 .hero-title {
     font-size: 3rem;
     font-weight: 700;
