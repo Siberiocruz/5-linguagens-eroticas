@@ -39,6 +39,11 @@ function handleCaptureSubmit(e) {
     }
 
     // Mostrar quiz
+    const quizSection = document.getElementById('quiz-section');
+    if (quizSection) {
+        quizSection.style.display = 'block';
+    }
+    
     const quizContainer = document.getElementById('quiz-container');
     if (quizContainer) {
         quizContainer.style.display = 'block';
