@@ -3,217 +3,474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instituto Sibério Cruz - Terapias Integrativas</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 30px;
-            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            font-weight: bold;
-            color: white;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            color: #1a1a2e;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            font-size: 1.2em;
-            color: #d4af37;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        p {
-            font-size: 1.1em;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
-            padding: 40px;
-            border-radius: 15px;
-            margin: 40px 0;
-        }
-
-        .cta-section h2 {
-            color: #1a1a2e;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-
-        .cta-section p {
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
-            color: #1a1a2e;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.1em;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-            margin: 10px;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
-        }
-
-        .btn-secondary {
-            background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
-            color: #d4af37;
-            border: 2px solid #d4af37;
-        }
-
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 40px 0;
-        }
-
-        .feature {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #d4af37;
-        }
-
-        .feature h3 {
-            color: #1a1a2e;
-            margin-bottom: 10px;
-        }
-
-        .feature p {
-            font-size: 0.95em;
-            color: #666;
-            margin: 0;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #999;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .logo {
-                width: 80px;
-                height: 80px;
-                font-size: 40px;
-            }
-        }
-    </style>
+    <meta name="description" content="Descubra sua linguagem erótica com o teste das 5 linguagens eróticas de Jaiya. Teste completo com 33 perguntas profundas.">
+    <meta name="keywords" content="linguagens eróticas, teste de sexualidade, prazer feminino, tantra, sexualidade consciente">
+    <meta name="author" content="Instituto Sibério Cruz">
+    <meta property="og:title" content="As 5 Linguagens Eróticas - Descubra Seu Perfil de Prazer">
+    <meta property="og:description" content="Teste interativo para descobrir sua linguagem erótica e desbloquear seu verdadeiro potencial de prazer.">
+    <meta property="og:type" content="website">
+    <title>As 5 Linguagens Eróticas - Descubra Seu Perfil de Prazer | Instituto Sibério Cruz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": "As 5 Linguagens Eróticas",
+      "description": "Descubra qual é sua linguagem erótica e desbloqueie seu verdadeiro potencial de prazer",
+      "creator": {
+        "@type": "Person",
+        "name": "Sibério Cruz",
+        "jobTitle": "Sexólogo, Psicanalista e Escritor"
+      }
+    }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">🔱</div>
-        
-        <h1>Instituto Sibério Cruz</h1>
-        <p class="subtitle">Terapias Integrativas & Tantra</p>
-        
-        <p>Bem-vindo ao espaço sagrado de transformação e autoconhecimento. Aqui você encontrará ferramentas poderosas para despertar seu potencial erótico e espiritual.</p>
-
-        <div class="cta-section">
-            <h2>Descubra Suas Linguagens Eróticas</h2>
-            <p>Faça nosso teste exclusivo e descubra como você experimenta o prazer. Um quiz profundo baseado em Tantra, Psicanálise e Neurociência.</p>
-            <a href="/teste/" class="btn">Fazer o Teste Agora</a>
-        </div>
-
-        <div class="features">
-            <div class="feature">
-                <h3>🧘 Tantra Raiz</h3>
-                <p>Metodologia tântrica profunda e ética</p>
-            </div>
-            <div class="feature">
-                <h3>🧠 Psicanálise</h3>
-                <p>Conceitos de Freud, Reich e trauma sexual</p>
-            </div>
-            <div class="feature">
-                <h3>❤️ Transformação</h3>
-                <p>Desbloqueie seu potencial de prazer</p>
-            </div>
-            <div class="feature">
-                <h3>📱 Acesso Fácil</h3>
-                <p>Teste completo em poucos minutos</p>
+    <!-- HEADER COM LOGO -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <img src="logo.png" alt="Instituto Sibério Cruz" class="logo">
+                <div class="logo-text">
+                    <h1>Instituto Sibério Cruz</h1>
+                    <p>Terapias Integrativas</p>
+                </div>
             </div>
         </div>
+    </header>
 
-        <p style="margin-top: 40px; color: #999; font-size: 0.95em;">
-            <strong>Sibério Cruz</strong><br>
-            Sexólogo | Psicanalista | Escritor<br>
-            Especialista em Sexualidade Feminina e Tantra
-        </p>
+    <!-- HERO SECTION - CAPA VENDEDORA -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h2 class="hero-title">Descubra Seu Perfil de Prazer</h2>
+                    <p class="hero-subtitle">As 5 Linguagens Eróticas que Definem Como Você Sente Prazer</p>
+                    
+                    <div class="hero-value-prop">
+                        <h3>Por Que Este Teste É Diferente?</h3>
+                        <ul class="value-list">
+                            <li>✨ <strong>Diagnóstico Profundo:</strong> Não é só entretenimento — é uma ferramenta terapêutica real</li>
+                            <li>🔬 <strong>Embasamento Científico:</strong> Baseado em neurociência, psicanálise e tantra raiz</li>
+                            <li>💡 <strong>Revelação de Bloqueios:</strong> Identifica não só seu padrão, mas por onde começar o desbloqueio</li>
+                            <li>🎯 <strong>Transformação Comprovada:</strong> Milhares de mulheres já descobriram seu verdadeiro potencial</li>
+                            <li>🚀 <strong>Próximo Passo Claro:</strong> Cada resultado aponta exatamente o que você precisa fazer</li>
+                        </ul>
+                    </div>
 
-        <footer>
-            © 2026 Instituto Sibério Cruz. Todos os direitos reservados.
-        </footer>
-    </div>
-</body>
+                    <p class="hero-description">
+                        Você sente prazer de uma forma única. Mas talvez nunca tenha entendido exatamente como.
+                        <br><br>
+                        <strong>Este teste vai revelar não apenas seu padrão de resposta… mas também por onde começar seu desbloqueio real.</strong>
+                        <br><br>
+                        E o mais importante: vai mostrar que você não está sozinha. Que seu corpo não está errado. Que existe uma solução.
+                    </p>
+
+                    <div class="cta-preview">
+                        <p><strong>⏱️ Tempo do teste:</strong> 5-7 minutos</p>
+                        <p><strong>📊 Resultado:</strong> Diagnóstico completo + próximos passos</p>
+                        <p><strong>🎁 Bônus:</strong> Acesso a uma sessão personalizada de desbloqueio</p>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="foto-consultor.jpg" alt="Instituto Sibério Cruz - Consultor" class="hero-photo">
+                    <div class="hero-badge">
+                        <p>Desenvolvido por Sibério Cruz<br>Sexólogo | Psicanalista | Escritor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE CAPTURA -->
+    <section id="capture-form-section" class="capture-form-section">
+        <div class="container">
+            <div class="capture-form-container">
+                <h2>Antes de Começar...</h2>
+                <p>Para personalizar seu resultado e enviar insights exclusivos, precisamos de seus dados:</p>
+                <form id="captureForm" class="capture-form">
+                    <div class="form-group">
+                        <label for="fullName">Nome Completo *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Seu nome completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp *</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(XX) XXXXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="ageConfirm" name="ageConfirm" required>
+                        <label for="ageConfirm">Confirmo que tenho 18 anos ou mais *</label>
+                    </div>
+                    <button type="submit" class="btn-start-quiz">Começar o Teste</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCAÇÃO SOBRE AS 5 LINGUAGENS ERÓTICAS -->
+    <section class="languages-education">
+        <div class="container">
+            <h2 class="section-title">As 5 Linguagens Eróticas</h2>
+            <p class="section-intro">Cada mulher sente prazer de uma forma única. Descubra qual é a sua linguagem erótica e entenda por que você responde da forma que responde.</p>
+
+            <!-- LINGUAGEM 1: ENERGÉTICO -->
+            <div class="language-card energetic">
+                <div class="language-header">
+                    <div class="language-emoji">⚡</div>
+                    <h3>Linguagem Energética</h3>
+                    <p class="language-subtitle">A Presença Antes do Toque</p>
+                </div>
+                <div class="language-content">
+                    <div class="language-description">
+                        <p>Se você é do perfil <strong>Energético</strong>, você sente prazer ANTES de ser tocada. É aquele olhar que te faz arrepiar. Aquela presença que te ativa. Aquela tensão no ar que já te deixa em outro estado.</p>
+                        <p>Para você, o prazer começa na <strong>mente</strong>. Na <strong>antecipação</strong>. Na <strong>energia</strong> que flui entre duas pessoas.</p>
+                    </div>
+                    <div class="language-signs">
+                        <h4>🔍 Sinais de que você é Energética:</h4>
+                        <ul>
+                            <li>Você se sente ativada pelo olhar de alguém</li>
+                            <li>A tensão sexual te excita mais que o toque direto</li>
+                            <li>Você responde à presença, à energia, à intenção</li>
+                            <li>Um sussurro no seu ouvido te deixa em outro estado</li>
+                            <li>Você sente tudo… mas às vezes não consegue ir até o final</li>
+                        </ul>
+                    </div>
+                    <div class="language-block">
+                        <h4>⚠️ O Bloqueio Invisível:</h4>
+                        <p>Mulheres Energéticas frequentemente vivem no "quase". Elas sentem tudo, mas quando as coisas começam a ficar REAIS, elas se retraem. É como se houvesse um limite invisível: "até aqui é seguro… mais que isso, eu não sei."</p>
+                        <p>Resultado? <strong>Frustração crônica.</strong> Você sente muito, mas nunca chega ao auge completo.</p>
+                    </div>
+                    <div class="language-transformation">
+                        <h4>✨ A Transformação:</h4>
+                        <p>Quando uma mulher Energética aprende a <strong>confiar na sua entrega</strong>, tudo muda. Ela descobre que pode ir além da antecipação. Que o corpo pode responder de formas que ela nunca imaginou. Que o prazer profundo é possível.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LINGUAGEM 2: SENSORIAL -->
+            <div class="language-card sensorial">
+                <div class="language-header">
+                    <div class="language-emoji">🌸</div>
+                    <h3>Linguagem Sensorial</h3>
+                    <p class="language-subtitle">O Conforto e a Segurança</p>
+                </div>
+                <div class="language-content">
+                    <div class="language-description">
+                        <p>Se você é do perfil <strong>Sensorial</strong>, você precisa de <strong>ambiente</strong>. De <strong>conforto</strong>. De <strong>segurança</strong>. Você sente prazer através dos sentidos: o cheiro, a textura, a temperatura, a luz, o som.</p>
+                        <p>Para você, o prazer é uma <strong>experiência completa</strong>. Não é só o toque. É tudo junto.</p>
+                    </div>
+                    <div class="language-signs">
+                        <h4>🔍 Sinais de que você é Sensorial:</h4>
+                        <ul>
+                            <li>Você precisa se sentir segura para relaxar</li>
+                            <li>O ambiente importa MUITO para você</li>
+                            <li>Você adora texturas, cheiros, sons específicos</li>
+                            <li>Um toque lento e cuidadoso te deixa em êxtase</li>
+                            <li>Quando não está confortável, seu corpo simplesmente desliga</li>
+                        </ul>
+                    </div>
+                    <div class="language-block">
+                        <h4>⚠️ O Bloqueio Invisível:</h4>
+                        <p>Mulheres Sensoriais frequentemente vivem em estado de <strong>alerta constante</strong>. Seu corpo está sempre "ligado" para detectar ameaças. Resultado? Mesmo quando tudo está "certo", é difícil realmente relaxar.</p>
+                        <p>Você precisa de TUDO perfeito para sentir algo. E ainda assim, às vezes não consegue.</p>
+                    </div>
+                    <div class="language-transformation">
+                        <h4>✨ A Transformação:</h4>
+                        <p>Quando uma mulher Sensorial aprende a <strong>regular seu sistema nervoso</strong>, ela descobre uma liberdade que nunca teve. Ela consegue relaxar mesmo que não seja "perfeito". Ela sente prazer de formas que antes pareciam impossíveis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LINGUAGEM 3: SEXUAL -->
+            <div class="language-card sexual">
+                <div class="language-header">
+                    <div class="language-emoji">🔴</div>
+                    <h3>Linguagem Sexual</h3>
+                    <p class="language-subtitle">A Intensidade e o Desejo Direto</p>
+                </div>
+                <div class="language-content">
+                    <div class="language-description">
+                        <p>Se você é do perfil <strong>Sexual</strong>, você é <strong>direta</strong>. Você sente <strong>desejo físico claro</strong>. Você quer <strong>intensidade</strong>. Você responde ao toque direto, à nudez, ao contato sem filtros.</p>
+                        <p>Para você, o prazer é <strong>físico</strong>. E você sente com facilidade.</p>
+                    </div>
+                    <div class="language-signs">
+                        <h4>🔍 Sinais de que você é Sexual:</h4>
+                        <ul>
+                            <li>Você sente desejo físico rápido e claro</li>
+                            <li>Você prefere intensidade a sutileza</li>
+                            <li>Você responde bem ao toque direto</li>
+                            <li>Você gosta de saber exatamente o que quer</li>
+                            <li>Às vezes sente que falta algo… mesmo quando funciona</li>
+                        </ul>
+                    </div>
+                    <div class="language-block">
+                        <h4>⚠️ O Bloqueio Invisível:</h4>
+                        <p>Mulheres Sexuais frequentemente vivem um <strong>prazer superficial</strong>. Elas sentem fisicamente, mas emocionalmente estão distantes. É como se houvesse uma desconexão entre o corpo e o coração.</p>
+                        <p>Resultado? Prazer momentâneo, mas sem profundidade. Sem transformação.</p>
+                    </div>
+                    <div class="language-transformation">
+                        <h4>✨ A Transformação:</h4>
+                        <p>Quando uma mulher Sexual aprende a <strong>integrar emoção e corpo</strong>, ela descobre um prazer que vai muito além do físico. Ela sente intensidade, mas com profundidade. Ela experimenta transformação real.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LINGUAGEM 4: OUSADA -->
+            <div class="language-card ousada">
+                <div class="language-header">
+                    <div class="language-emoji">🟣</div>
+                    <h3>Linguagem Ousada</h3>
+                    <p class="language-subtitle">O Proibido e a Provocação</p>
+                </div>
+                <div class="language-content">
+                    <div class="language-description">
+                        <p>Se você é do perfil <strong>Ousado</strong>, você se ativa pelo <strong>diferente</strong>. Pelo <strong>proibido</strong>. Pelo <strong>jogo</strong>. Você gosta de quebrar regras, de explorar limites, de viver o que é fora do padrão.</p>
+                        <p>Para você, o prazer é uma <strong>aventura mental</strong>. É o jogo psicológico que te ativa.</p>
+                    </div>
+                    <div class="language-signs">
+                        <h4>🔍 Sinais de que você é Ousada:</h4>
+                        <ul>
+                            <li>Você se sente ativada pelo proibido</li>
+                            <li>Você gosta de jogos de poder, fantasia, provocação</li>
+                            <li>O básico não te prende… você precisa de algo a mais</li>
+                            <li>Você gosta de explorar seus limites</li>
+                            <li>Às vezes sente que nada é suficiente… que tudo fica morno</li>
+                        </ul>
+                    </div>
+                    <div class="language-block">
+                        <h4>⚠️ O Bloqueio Invisível:</h4>
+                        <p>Mulheres Ousadas frequentemente usam a <strong>provocação como defesa</strong>. Elas buscam o novo constantemente porque têm medo de ficar com você mesma. De se entregar de verdade.</p>
+                        <p>Resultado? Excitação constante, mas sem paz. Sem profundidade.</p>
+                    </div>
+                    <div class="language-transformation">
+                        <h4>✨ A Transformação:</h4>
+                        <p>Quando uma mulher Ousada aprende a <strong>ficar consigo mesma</strong>, ela descobre que o verdadeiro prazer não está na fuga. Está na entrega. E quando ela se entrega, descobre uma intensidade que nenhum jogo externo pode oferecer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LINGUAGEM 5: EXPLORADOR -->
+            <div class="language-card explorador">
+                <div class="language-header">
+                    <div class="language-emoji">🌈</div>
+                    <h3>Linguagem Explorador</h3>
+                    <p class="language-subtitle">A Liberdade e a Adaptabilidade</p>
+                </div>
+                <div class="language-content">
+                    <div class="language-description">
+                        <p>Se você é do perfil <strong>Explorador</strong>, você é <strong>flexível</strong>. Você se adapta. Você gosta de <strong>variar</strong>. Você pode sentir de várias formas diferentes dependendo do momento, do contexto, da pessoa.</p>
+                        <p>Para você, o prazer é uma <strong>jornada de descoberta</strong>. Você quer explorar, experimentar, descobrir.</p>
+                    </div>
+                    <div class="language-signs">
+                        <h4>🔍 Sinais de que você é Explorador:</h4>
+                        <ul>
+                            <li>Você se adapta facilmente a diferentes situações</li>
+                            <li>Você gosta de variedade e novidade</li>
+                            <li>Você pode sentir de várias formas diferentes</li>
+                            <li>Você é curiosa e aventureira</li>
+                            <li>Às vezes sente que nada se aprofunda… que fica sempre na superfície</li>
+                        </ul>
+                    </div>
+                    <div class="language-block">
+                        <h4>⚠️ O Bloqueio Invisível:</h4>
+                        <p>Mulheres Exploradoras frequentemente vivem na <strong>dispersão</strong>. Elas podem sentir tudo, mas não mergulham em nada. É como se estivessem sempre na superfície, nunca realmente dentro.</p>
+                        <p>Resultado? Muitas experiências, mas pouca profundidade. Muita exploração, mas pouca transformação.</p>
+                    </div>
+                    <div class="language-transformation">
+                        <h4>✨ A Transformação:</h4>
+                        <p>Quando uma mulher Explorador aprende a <strong>ficar em um lugar</strong>, ela descobre o verdadeiro prazer. Ela aprende que a profundidade é muito mais satisfatória que a variedade. E quando ela mergulha, descobre mundos que nunca imaginou.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA PARA DESCOBRIR -->
+            <div class="languages-cta">
+                <h3>Qual é a Sua Linguagem Erótica?</h3>
+                <p>Agora que você conhece as 5 linguagens, você provavelmente já se identificou com algumas delas. Mas a verdade é que você pode ter uma mistura. Pode ter bloqueios em uma e facilidade em outra.</p>
+                <p><strong>O teste completo vai revelar exatamente qual é o seu padrão… e por onde começar seu desbloqueio.</strong></p>
+                <a href="#capture-form" class="btn-discover">Descobrir Minha Linguagem Erótica</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE CAPTURA -->
+    <section class="capture-section" id="capture-form">
+        <div class="container">
+            <div class="capture-card">
+                <h3>Antes de Começar o Teste…</h3>
+                <p>Queremos conhecer você melhor para personalizar sua experiência e enviar insights exclusivos.</p>
+                
+                <form id="capture-form-element" class="capture-form">
+                    <div class="form-group">
+                        <label for="full-name">Nome Completo *</label>
+                        <input type="text" id="full-name" name="full_name" required placeholder="Seu nome completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp (com DDD) *</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(18) 99666-9890">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="age-confirm" name="age_confirm" required>
+                        <label for="age-confirm">Confirmo que sou maior de 18 anos *</label>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="privacy-confirm" name="privacy_confirm" required>
+                        <label for="privacy-confirm">Concordo em receber insights e ofertas exclusivas *</label>
+                    </div>
+
+                    <button type="submit" class="btn-start-quiz">Começar o Teste Agora</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT - QUIZ -->
+    <main class="main-content" id="quiz-container" style="display: none;">
+        <div class="container">
+            <!-- QUIZ SECTION -->
+          <div id="quiz-container" class="quiz-container" style="display: none;">               <div class="quiz-header">
+                    <div class="quiz-header-top">
+                        <img src="logo.png" alt="Instituto Sibério Cruz" class="quiz-logo">
+                        <h3>Quiz: As 5 Linguagens Eróticas</h3>
+                    </div>
+                    <p class="quiz-instruction">Para cada pergunta, escolha apenas UMA alternativa que mais ressoa com você.</p>
+                    <p class="quiz-time">⏱️ Tempo estimado: 5-7 minutos</p>
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div id="progress-fill" class="progress-fill"></div>
+                        </div>
+                        <p id="progress-text">Pergunta 1 de 33</p>
+                    </div>
+                </div>
+
+                <form id="quiz-form">
+                    <!-- Perguntas do Quiz -->
+                    <div class="questions-container" id="questions-container"></div>
+                    
+                    <button type="submit" class="btn-submit">Ver Meu Resultado</button>
+                </form>
+            </div>
+
+            <!-- RESULTADO SECTION (Hidden by default) -->
+            <div id="result-section" class="result-section" style="display: none;">
+                <div class="result-card">
+                    <div class="result-header-top">
+                        <img src="logo.png" alt="Instituto Sibério Cruz" class="result-logo">
+                    </div>
+                    <div class="result-header" id="result-header"></div>
+                    <div class="result-content" id="result-content"></div>
+                    
+                    <div class="result-institute-info">
+                        <img src="instituto.jpg" alt="Instituto Sibério Cruz" class="institute-photo">
+                        <div class="institute-text">
+                            <h4>Instituto Sibério Cruz</h4>
+                            <p>Terapias Integrativas com foco em transformação sexual e emocional.</p>
+                            <p><strong>Especialidade:</strong> Massagem Tântrica, Desbloqueio Sexual e Integração Emocional</p>
+                        </div>
+                    </div>
+
+                    <div class="result-cta">
+                        <h4>🔥 Próximo Passo: Sessão Personalizada</h4>
+                        <p>Seu resultado mostra por onde começar. Mas é no corpo, com condução profissional, que a transformação realmente acontece.</p>
+                        <a href="https://wa.me/5518996669890?text=Olá!%20Fiz%20o%20teste%20das%205%20linguagens%20eróticas%20e%20gostaria%20de%20agendar%20uma%20sessão%20de%20massagem%20tântrica%20personalizada%20para%20meu%20perfil%20de%20prazer." 
+                           class="btn-whatsapp" target="_blank">
+                            📱 Agendar Sessão no WhatsApp
+                        </a>
+                        <p class="cta-subtext">Resposta em até 2 horas | Consulta inicial gratuita</p>
+                    </div>
+
+                    <button onclick="resetQuiz()" class="btn-reset">Fazer Quiz Novamente</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials" id="testimonials-section" style="display: none;">
+        <div class="container">
+            <h3>O Que Mulheres Dizem Sobre Este Teste</h3>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Finalmente entendi por que eu não conseguia sentir prazer. O teste revelou bloqueios que eu nem sabia que tinha."</p>
+                    <p class="testimonial-author">— Marina, 34 anos</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"A sessão depois do teste foi transformadora. Meu corpo finalmente começou a responder de verdade."</p>
+                    <p class="testimonial-author">— Juliana, 28 anos</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Não é só um teste. É uma jornada de autoconhecimento que muda tudo."</p>
+                    <p class="testimonial-author">— Fernanda, 41 anos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <script>
+        // Mostrar formulário e esconder quiz inicialmente
+        document.getElementById('capture-form-section').style.display = 'block';
+        
+        // Ao enviar o formulário
+        document.getElementById('captureForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obter dados
+            const fullName = document.getElementById('fullName').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const email = document.getElementById('email').value;
+            
+            // Salvar no localStorage
+            localStorage.setItem('quizUserName', fullName);
+            localStorage.setItem('quizUserWhatsapp', whatsapp);
+            localStorage.setItem('quizUserEmail', email);
+            
+            // Esconder formulário e mostrar quiz
+            document.getElementById('capture-form-section').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'block';
+            
+            // Scroll para o topo
+            window.scrollTo(0, 0);
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="logo.png" alt="Instituto Sibério Cruz" class="footer-logo">
+                    <h4>Instituto Sibério Cruz</h4>
+                    <p>Terapias Integrativas</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Contato</h5>
+                    <p>WhatsApp: <a href="https://wa.me/5518996669890">18 99666-9890</a></p>
+                </div>
+                <div class="footer-section">
+                    <h5>Sobre</h5>
+                    <p>Especialista em Tantra, Psicanálise e Sexualidade Feminina</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Instituto Sibério Cruz. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="quiz-data.js"></script>
+    <script src="script.js"></script>
+    </body>
 </html>
