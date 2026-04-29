@@ -1,0 +1,1006 @@
+/* ============================================
+   VARIÁVEIS E RESET
+   ============================================ */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #d4af37;
+    --accent-color: #8b4789;
+    --text-dark: #1a1a1a;
+    --text-light: #666;
+    --bg-light: #f8f7f5;
+    --bg-white: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.15);
+    
+    --color-energetic: #5b9bd5;
+    --color-sensorial: #e8b4d4;
+    --color-sexual: #d94a38;
+    --color-ousada: #9b59b6;
+    --color-explorador: #2ecc71;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--bg-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a2332 100%);
+    color: white;
+    padding: 20px 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.logo-text p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a2332 100%);
+    color: white;
+    padding: 60px 0;
+    margin-bottom: 60px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+}
+
+.hero-value-prop h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.value-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.value-list li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.cta-preview {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.cta-preview p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-photo {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
+}
+
+.hero-badge {
+    background: rgba(212, 175, 55, 0.95);
+    color: var(--primary-color);
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ============================================
+   LANGUAGES EDUCATION SECTION
+   ============================================ */
+.languages-education {
+    padding: 80px 0;
+    background: var(--bg-white);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================
+   LANGUAGE CARDS
+   ============================================ */
+.language-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    border-top: 5px solid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.language-card.energetic {
+    border-top-color: var(--color-energetic);
+}
+
+.language-card.sensorial {
+    border-top-color: var(--color-sensorial);
+}
+
+.language-card.sexual {
+    border-top-color: var(--color-sexual);
+}
+
+.language-card.ousada {
+    border-top-color: var(--color-ousada);
+}
+
+.language-card.explorador {
+    border-top-color: var(--color-explorador);
+}
+
+.language-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.language-emoji {
+    font-size: 3rem;
+}
+
+.language-header h3 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.language-subtitle {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin: 5px 0 0 0;
+}
+
+.language-content > div {
+    margin-bottom: 25px;
+}
+
+.language-description p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.language-signs h4,
+.language-block h4,
+.language-transformation h4 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+}
+
+.language-signs ul,
+.language-block ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.language-signs li,
+.language-block li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.language-signs li:before,
+.language-block li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.language-block {
+    background: #fff3cd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+}
+
+.language-block p {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.language-block p:last-child {
+    margin-bottom: 0;
+}
+
+.language-transformation {
+    background: #d4edda;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+}
+
+.language-transformation p {
+    line-height: 1.7;
+}
+
+/* ============================================
+   LANGUAGES CTA
+   ============================================ */
+.languages-cta {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a2332 100%);
+    color: white;
+    border-radius: 12px;
+}
+
+.languages-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.languages-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-discover,
+.btn-start-quiz,
+.btn-submit,
+.btn-whatsapp,
+.btn-reset {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-discover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    margin-top: 20px;
+}
+
+.btn-discover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-start-quiz,
+.btn-submit {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #6b3566 100%);
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn-start-quiz:hover,
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(139, 71, 137, 0.3);
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: white;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.btn-whatsapp:hover {
+    background: #1fad50;
+    transform: scale(1.05);
+}
+
+.btn-reset {
+    background: var(--text-light);
+    color: white;
+    margin-top: 20px;
+}
+
+.btn-reset:hover {
+    background: var(--text-dark);
+}
+
+/* ============================================
+   CAPTURE SECTION
+   ============================================ */
+.capture-section {
+    padding: 60px 0;
+    background: var(--bg-light);
+}
+
+.capture-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.capture-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.capture-card > p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.capture-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.form-group input {
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(139, 71, 137, 0.1);
+}
+
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.form-group.checkbox input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.form-group.checkbox label {
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* ============================================
+   QUIZ SECTION
+   ============================================ */
+.main-content {
+    padding: 40px 0;
+    background: var(--bg-light);
+}
+
+.quiz-section {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quiz-header {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.quiz-header-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.quiz-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.quiz-header h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.quiz-instruction {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.quiz-time {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.quiz-progress {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#progress-text {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.questions-container {
+    margin-bottom: 30px;
+}
+
+.question-group {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.question-group:last-child {
+    border-bottom: none;
+}
+
+.question-number {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.question-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: inline;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    cursor: pointer;
+    accent-color: var(--accent-color);
+}
+
+.option label {
+    cursor: pointer;
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background: var(--bg-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.option input[type="radio"]:checked + label {
+    background: rgba(139, 71, 137, 0.1);
+    border: 2px solid var(--accent-color);
+    font-weight: 600;
+}
+
+/* ============================================
+   RESULT SECTION
+   ============================================ */
+.result-section {
+    background: var(--bg-light);
+    padding: 40px 0;
+}
+
+.result-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.result-header-top {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.result-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.result-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.result-emoji {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.result-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.result-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.result-content {
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.result-content p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.result-content strong {
+    color: var(--primary-color);
+}
+
+.result-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.result-content li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.result-content li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.truth-section,
+.solution-section {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid var(--accent-color);
+}
+
+.truth-section strong,
+.solution-section strong {
+    color: var(--primary-color);
+}
+
+.result-institute-info {
+    display: flex;
+    gap: 20px;
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+    align-items: flex-start;
+}
+
+.institute-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.institute-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.institute-text p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.result-cta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a2332 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.result-cta h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.result-cta p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.cta-subtext {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+.testimonials {
+    padding: 60px 0;
+    background: white;
+}
+
+.testimonials h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-style: italic;
+    color: var(--text-dark);
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section h4,
+.footer-section h5 {
+    margin-bottom: 12px;
+    color: var(--secondary-color);
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.footer-section a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .language-card {
+        padding: 25px;
+    }
+
+    .language-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .language-emoji {
+        font-size: 2.5rem;
+    }
+
+    .quiz-section,
+    .capture-card,
+    .result-card {
+        padding: 25px;
+    }
+
+    .result-institute-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .institute-photo {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .language-card {
+        padding: 20px;
+    }
+
+    .quiz-section,
+    .capture-card,
+    .result-card {
+        padding: 20px;
+    }
+
+    .btn-discover,
+    .btn-start-quiz,
+    .btn-submit,
+    .btn-whatsapp {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .result-emoji {
+        font-size: 3rem;
+    }
+
+    .result-title {
+        font-size: 1.5rem;
+    }
+}

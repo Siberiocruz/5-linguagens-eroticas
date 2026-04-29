@@ -1,0 +1,32 @@
+[build]
+  command = "npm install"
+  functions = "functions"
+  publish = "."
+
+[dev]
+  command = "npm run dev"
+  port = 3000
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/dashboard.html"
+  status = 200
+
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+[context.deploy-preview]
+  environment = { NODE_ENV = "preview" }
+
+[context.branch-deploy]
+  environment = { NODE_ENV = "development" }
