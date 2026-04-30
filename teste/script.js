@@ -40,7 +40,7 @@ function handleCaptureSubmit(e) {
     };
 
     // Enviar para Google Apps Script (planilha) - sem aguardar resposta
-    fetch('https://script.google.com/macros/s/AKfycbw8eLI30aPyRvZgGlTyL77hgfWlHrqQw_tjXy1kAeXT7Rob8Kr9kxjlvlERcPDkkrZb/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbx2Bo6XVfiVEI3pQ4SuH8m4RB0sUDMDZIbYk_xWV_Is10A3PgkzKFXUNfsv_GIx8xfz/exec', {
         method: 'POST',
         body: JSON.stringify(dataToSend),
         headers: {
