@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Formulário - Instituto Sibério Cruz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-card h3 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #764ba2;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #6a3f8a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .search-box input {
+            padding: 10px 15px;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            font-size: 1em;
+            width: 300px;
+            max-width: 100%;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #764ba2;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .table-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tbody tr {
+            transition: background-color 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .id-badge {
+            background: #667eea;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85em;
+        }
+
+        .email-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .whatsapp-link {
+            color: #25d366;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .whatsapp-link:hover {
+            text-decoration: underline;
+        }
+
+        .date-badge {
+            background: #f0f0f0;
+            color: #666;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85em;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .error {
+            background: #ff6b6b;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .empty {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .pagination button {
+            padding: 8px 12px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .pagination button:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .pagination button.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .export-btn {
+            background: #27ae60;
+            color: white;
+        }
+
+        .export-btn:hover {
+            background: #229954;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        .refresh-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #27ae60;
+            border-radius: 50%;
+            margin-left: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./" class="back-link">← Voltar para o Quiz</a>
+
+        <header>
+            <h1>📊 Dados do Formulário</h1>
+            <p>Instituto Sibério Cruz - Visualização em Tempo Real</p>
+            <span class="refresh-indicator"></span>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3 id="total-count">0</h3>
+                <p>Total de Registros</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="today-count">0</h3>
+                <p>Registros Hoje</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="unique-emails">0</h3>
+                <p>Emails Únicos</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="loadData()">🔄 Atualizar Dados</button>
+            <button class="btn btn-secondary" onclick="exportToCSV()">📥 Exportar CSV</button>
+            <button class="btn export-btn" onclick="exportToJSON()">📥 Exportar JSON</button>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="🔍 Buscar por nome, email ou WhatsApp..." onkeyup="filterTable()">
+        </div>
+
+        <div id="error-container"></div>
+
+        <div id="loading" class="loading" style="display: none;">
+            ⏳ Carregando dados...
+        </div>
+
+        <div id="table-container" class="table-container" style="display: none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>WhatsApp</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </div>
+
+        <div id="empty-state" class="empty" style="display: none;">
+            <p>Nenhum registro encontrado</p>
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+
+        <div class="footer">
+            <p>🔐 Dados protegidos e atualizados em tempo real</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">© 2026 Instituto Sibério Cruz</p>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // CONFIGURAÇÃO DO SUPABASE
+        // ============================================
+        const SUPABASE_URL = 'https://fpfyhykxsrlhpvutytcf.supabase.co';
+        const SUPABASE_ANON_KEY = 'sb_publishable_RdOfCy-olXjgErba0Iqheg_bInPWzfH';
+
+        let allData = [];
+        let filteredData = [];
+        let currentPage = 1;
+        const itemsPerPage = 10;
+
+        // ============================================
+        // FUNÇÕES PRINCIPAIS
+        // ============================================
+
+        async function loadData() {
+            const loading = document.getElementById('loading');
+            const tableContainer = document.getElementById('table-container');
+            const emptyState = document.getElementById('empty-state');
+            const errorContainer = document.getElementById('error-container');
+
+            loading.style.display = 'block';
+            tableContainer.style.display = 'none';
+            emptyState.style.display = 'none';
+            errorContainer.innerHTML = '';
+
+            try {
+                console.log('📤 Buscando dados do Supabase...');
+
+                const response = await fetch(
+                    `${SUPABASE_URL}/rest/v1/formularios?order=id.desc`,
+                    {
+                        method: 'GET',
+                        headers: {
+                            'apikey': SUPABASE_ANON_KEY,
+                            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+                        }
+                    }
+                );
+
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP: ${response.status}`);
+                }
+
+                allData = await response.json();
+                filteredData = [...allData];
+
+                console.log(`✅ ${allData.length} registros carregados`);
+
+                updateStats();
+                displayTable();
+                setupPagination();
+
+                loading.style.display = 'none';
+
+                if (allData.length === 0) {
+                    emptyState.style.display = 'block';
+                } else {
+                    tableContainer.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('❌ Erro ao carregar dados:', error);
+                loading.style.display = 'none';
+                errorContainer.innerHTML = `<div class="error">❌ Erro ao carregar dados: ${error.message}</div>`;
+            }
+        }
+
+        function updateStats() {
+            // Total de registros
+            document.getElementById('total-count').textContent = allData.length;
+
+            // Registros de hoje
+            const today = new Date().toDateString();
+            const todayCount = allData.filter(item => {
+                const itemDate = new Date(item.created_at).toDateString();
+                return itemDate === today;
+            }).length;
+            document.getElementById('today-count').textContent = todayCount;
+
+            // Emails únicos
+            const uniqueEmails = new Set(allData.map(item => item.email)).size;
+            document.getElementById('unique-emails').textContent = uniqueEmails;
+        }
+
+        function displayTable() {
+            const tableBody = document.getElementById('table-body');
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const pageData = filteredData.slice(start, end);
+
+            tableBody.innerHTML = '';
+
+            pageData.forEach(item => {
+                const row = document.createElement('tr');
+                const date = new Date(item.created_at).toLocaleString('pt-BR');
+
+                row.innerHTML = `
+                    <td><span class="id-badge">#${item.id}</span></td>
+                    <td>${escapeHtml(item.nome)}</td>
+                    <td><a href="mailto:${item.email}" class="email-link">${item.email}</a></td>
+                    <td><a href="https://wa.me/${item.whatsapp.replace(/\D/g, '')}" target="_blank" class="whatsapp-link">📱 ${item.whatsapp}</a></td>
+                    <td><span class="date-badge">${date}</span></td>
+                `;
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        function setupPagination() {
+            const pagination = document.getElementById('pagination');
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+            pagination.innerHTML = '';
+
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.textContent = i;
+                button.className = i === currentPage ? 'active' : '';
+                button.onclick = () => {
+                    currentPage = i;
+                    displayTable();
+                    setupPagination();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+                pagination.appendChild(button);
+            }
+        }
+
+        function filterTable() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+
+            filteredData = allData.filter(item => {
+                return (
+                    item.nome.toLowerCase().includes(searchTerm) ||
+                    item.email.toLowerCase().includes(searchTerm) ||
+                    item.whatsapp.toLowerCase().includes(searchTerm)
+                );
+            });
+
+            currentPage = 1;
+            displayTable();
+            setupPagination();
+        }
+
+        function exportToCSV() {
+            if (allData.length === 0) {
+                alert('Nenhum dado para exportar');
+                return;
+            }
+
+            let csv = 'ID,Nome,Email,WhatsApp,Data\n';
+
+            allData.forEach(item => {
+                const date = new Date(item.created_at).toLocaleString('pt-BR');
+                csv += `${item.id},"${item.nome}","${item.email}","${item.whatsapp}","${date}"\n`;
+            });
+
+            downloadFile(csv, 'formularios.csv', 'text/csv');
+        }
+
+        function exportToJSON() {
+            if (allData.length === 0) {
+                alert('Nenhum dado para exportar');
+                return;
+            }
+
+            const json = JSON.stringify(allData, null, 2);
+            downloadFile(json, 'formularios.json', 'application/json');
+        }
+
+        function downloadFile(content, filename, type) {
+            const element = document.createElement('a');
+            element.setAttribute('href', `data:${type};charset=utf-8,${encodeURIComponent(content)}`);
+            element.setAttribute('download', filename);
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // ============================================
+        // INICIALIZAR
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🌐 Página de dados carregada');
+            loadData();
+
+            // Atualizar dados a cada 30 segundos
+            setInterval(loadData, 30000);
+        });
+    </script>
+</body>
+</html>
