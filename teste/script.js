@@ -39,20 +39,24 @@ function handleCaptureSubmit(e) {
         email: userData.email
     };
 
-    // Enviar para Google Form (que salva automaticamente na planilha)
-    const googleFormData = new FormData();
-    googleFormData.append('entry.908430483', userData.fullName); // ID do campo Nome no Google Form
-    googleFormData.append('entry.1275087991', userData.whatsapp); // ID do campo WhatsApp no Google Form
-    googleFormData.append('entry.1623089697', userData.email); // ID do campo Email no Google Form
+    // Enviar para backend local que salva na planilha
+    const backendData = {
+        full_name: userData.fullName,
+        whatsapp: userData.whatsapp,
+        email: userData.email
+    };
 
-    fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSdNl3Rx5Yo-kZftQ1g4fjJSHJJA-eDVs7zcvCv-NgHRfniuLg/formResponse', {
+    fetch('http://localhost:5000/api/capture', {
         method: 'POST',
-        body: googleFormData,
-        mode: 'no-cors'
+        body: JSON.stringify(backendData),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        mode: 'cors'
     }).then(response => {
-        console.log('Dados enviados para Google Form');
+        console.log('Dados enviados para backend:', response.status);
     }).catch(error => {
-        console.error('Erro ao enviar para Google Form:', error);
+        console.error('Erro ao enviar para backend:', error);
     });
 
     // Enviar para Formspree (email) - opcional
