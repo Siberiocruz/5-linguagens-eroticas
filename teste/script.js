@@ -82,6 +82,12 @@ function showQuiz() {
         captureSection.style.display = 'none';
     }
 
+    // Mostrar main
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) {
+        mainContent.style.display = 'block';
+    }
+
     // Mostrar quiz
     const quizContainer = document.getElementById('quiz-container');
     if (quizContainer) {
