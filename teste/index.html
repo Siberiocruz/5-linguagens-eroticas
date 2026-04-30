@@ -421,33 +421,6 @@
     </section>
 
     <!-- FOOTER -->
-    <script>
-        // Mostrar formulário e esconder quiz inicialmente
-        document.getElementById('capture-form-section').style.display = 'block';
-        
-        // Ao enviar o formulário
-        document.getElementById('captureForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Obter dados
-            const fullName = document.getElementById('fullName').value;
-            const whatsapp = document.getElementById('whatsapp').value;
-            const email = document.getElementById('email').value;
-            
-            // Salvar no localStorage
-            localStorage.setItem('quizUserName', fullName);
-            localStorage.setItem('quizUserWhatsapp', whatsapp);
-            localStorage.setItem('quizUserEmail', email);
-            
-            // Esconder formulário e mostrar quiz
-            document.getElementById('capture-form-section').style.display = 'none';
-            document.getElementById('quiz-container').style.display = 'block';
-            
-            // Scroll para o topo
-            window.scrollTo(0, 0);
-        });
-    </script>
-
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
