@@ -39,21 +39,23 @@ function handleCaptureSubmit(e) {
         email: userData.email
     };
 
-    // Enviar para Google Apps Script (planilha) - sem aguardar resposta
-    fetch('https://script.google.com/macros/s/AKfycbx2Bo6XVfiVEI3pQ4SuH8m4RB0sUDMDZIbYk_xWV_Is10A3PgkzKFXUNfsv_GIx8xfz/exec', {
+    // Enviar para Google Form (que salva automaticamente na planilha)
+    const googleFormData = new FormData();
+    googleFormData.append('entry.908430483', userData.fullName); // ID do campo Nome no Google Form
+    googleFormData.append('entry.1275087991', userData.whatsapp); // ID do campo WhatsApp no Google Form
+    googleFormData.append('entry.1623089697', userData.email); // ID do campo Email no Google Form
+
+    fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSdNl3Rx5Yo-kZftQ1g4fjJSHJJA-eDVs7zcvCv-NgHRfniuLg/formResponse', {
         method: 'POST',
-        body: JSON.stringify(dataToSend),
-        headers: {
-            'Content-Type': 'application/json'
-        },
+        body: googleFormData,
         mode: 'no-cors'
     }).then(response => {
-        console.log('Dados enviados para Google Sheets');
+        console.log('Dados enviados para Google Form');
     }).catch(error => {
-        console.error('Erro ao enviar para Google Sheets:', error);
+        console.error('Erro ao enviar para Google Form:', error);
     });
 
-    // Enviar para Formspree (email)
+    // Enviar para Formspree (email) - opcional
     const formData = new FormData();
     formData.append('full_name', userData.fullName);
     formData.append('whatsapp', userData.whatsapp);
