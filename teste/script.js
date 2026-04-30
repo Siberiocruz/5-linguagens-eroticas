@@ -1,3 +1,9 @@
+// ============================================
+// CONFIGURAÇÃO DO SUPABASE
+// ============================================
+const SUPABASE_URL = 'https://fpfyhykxsrlhpvutytcf.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_RdOfCy-olXjgErba0Iqheg_bInPWzfH';
+
 // Lógica do Quiz
 let currentQuestionIndex = 0;
 let answers = {};
@@ -18,6 +24,44 @@ function initCaptureForm() {
     }
 }
 
+// ============================================
+// FUNÇÃO PARA ENVIAR DADOS PARA SUPABASE
+// ============================================
+async function enviarParaSupabase(nome, whatsapp, email) {
+    try {
+        console.log('📤 Enviando dados para Supabase...');
+        
+        const response = await fetch(
+            `${SUPABASE_URL}/rest/v1/formularios`,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': SUPABASE_ANON_KEY,
+                    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+                },
+                body: JSON.stringify({
+                    nome: nome,
+                    whatsapp: whatsapp,
+                    email: email
+                })
+            }
+        );
+
+        if (response.ok) {
+            console.log('✅ Dados salvos com sucesso no Supabase!');
+            return { sucesso: true, mensagem: 'Dados salvos com sucesso!' };
+        } else {
+            const erro = await response.text();
+            console.error('❌ Erro ao salvar:', erro);
+            return { sucesso: false, mensagem: 'Erro ao salvar dados' };
+        }
+    } catch (error) {
+        console.error('❌ Erro de conexão:', error);
+        return { sucesso: false, mensagem: 'Erro de conexão com servidor' };
+    }
+}
+
 // Lidar com envio do formulário de captura
 function handleCaptureSubmit(e) {
     e.preventDefault();
@@ -31,14 +75,18 @@ function handleCaptureSubmit(e) {
     };
 
     console.log('Dados capturados:', userData);
+    
+    // Enviar para Supabase
+    enviarParaSupabase(userData.fullName, userData.whatsapp, userData.email)
+        .then(resultado => {
+            if (resultado.sucesso) {
+                console.log('✅ Dados salvos no Supabase!');
+            } else {
+                console.warn('⚠️ Dados não foram salvos no Supabase, mas continuando...');
+            }
+        });
 
-    // Enviar para Google Apps Script e Formspree
-    const dataToSend = {
-        full_name: userData.fullName,
-        whatsapp: userData.whatsapp,
-        email: userData.email
-    };
-
+    // Métodos de backup (opcional)
     // Enviar para backend local que salva na planilha
     const backendData = {
         full_name: userData.fullName,
