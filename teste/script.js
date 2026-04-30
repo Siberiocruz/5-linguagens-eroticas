@@ -39,15 +39,16 @@ function handleCaptureSubmit(e) {
         email: userData.email
     };
 
-    // Enviar para Google Apps Script (planilha)
+    // Enviar para Google Apps Script (planilha) - sem aguardar resposta
     fetch('https://script.google.com/macros/s/AKfycbxN4ZDAhEhu6u5VD98qGjsQgsUtIJfY2Vzkhsa7rGFh798ehwk46DcGTfqawONOGhGmdg/exec', {
         method: 'POST',
         body: JSON.stringify(dataToSend),
         headers: {
             'Content-Type': 'application/json'
-        }
+        },
+        mode: 'no-cors'
     }).then(response => {
-        console.log('Dados enviados para Google Sheets:', response.status);
+        console.log('Dados enviados para Google Sheets');
     }).catch(error => {
         console.error('Erro ao enviar para Google Sheets:', error);
     });
@@ -66,11 +67,12 @@ function handleCaptureSubmit(e) {
         }
     }).then(response => {
         console.log('Dados enviados para Formspree:', response.status);
-        showQuiz();
     }).catch(error => {
         console.error('Erro ao enviar para Formspree:', error);
-        showQuiz();
     });
+
+    // Abrir quiz imediatamente
+    showQuiz();
 }
 
 function showQuiz() {
