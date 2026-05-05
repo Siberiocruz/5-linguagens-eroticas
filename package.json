@@ -1,7 +1,7 @@
 {
   "name": "5-linguagens-eroticas",
   "version": "1.0.0",
-  "description": "Quiz interativo das 5 linguagens eróticas com integração Google Sheets",
+  "description": "Quiz interativo das 5 linguagens eróticas",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -17,14 +17,9 @@
   "author": "Instituto Sibério Cruz",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
-    "googleapis": "^118.0.0",
-    "dotenv": "^16.3.1"
+    "express": "^4.18.2"
   },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  },
+  "devDependencies": {},
   "engines": {
     "node": "20.x"
   }
