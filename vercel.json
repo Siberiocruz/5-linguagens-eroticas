@@ -2,26 +2,23 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".",
   "devCommand": "npm run dev",
-  "env": {
-    "GOOGLE_SHEET_ID": "@google_sheet_id",
-    "GOOGLE_API_KEY": "@google_api_key"
-  },
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
       "destination": "/api/$1"
-    },
-    {
-      "source": "/dashboard",
-      "destination": "/dashboard.html"
-    },
-    {
-      "source": "/teste/(.*)",
-      "destination": "/teste/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }
