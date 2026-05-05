@@ -1170,3 +1170,45 @@ body {
         font-size: 0.95em;
     }
 }
+
+
+/* ============================================
+   GRÁFICO DE PIZZA
+   ============================================ */
+.result-chart-container {
+    text-align: center;
+    margin: 40px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f7f5 0%, #ffffff 100%);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.result-chart-container h3 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+#result-pie-chart {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .result-chart-container {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .result-chart-container h3 {
+        font-size: 1.4em;
+    }
+
+    #result-pie-chart {
+        max-width: 300px;
+    }
+}
