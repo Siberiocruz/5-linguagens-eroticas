@@ -451,7 +451,7 @@ const results = {
                         <span style="text-decoration: line-through; color: #666; font-size: 0.9rem;">De R$ 97,00</span>
                         <span style="font-size: 2rem; font-weight: 900; color: #c9a84c;">R$ 29,99</span>
                     </div>
-                    <a href="/teste/ebook/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #e8c97a); color: #0d0d0d; font-weight: 800; font-size: 1.05rem; padding: 16px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 32px rgba(201,168,76,0.35);">🔓 Quero o Mapa do Meu Prazer</a>
+                    <a href="/ebook/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #e8c97a); color: #0d0d0d; font-weight: 800; font-size: 1.05rem; padding: 16px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 32px rgba(201,168,76,0.35);">🔓 Quero o Mapa do Meu Prazer</a>
                 </div>
             </div>
         `
@@ -496,7 +496,7 @@ const results = {
                         <span style="text-decoration: line-through; color: #666; font-size: 0.9rem;">De R$ 97,00</span>
                         <span style="font-size: 2rem; font-weight: 900; color: #c9a84c;">R$ 29,99</span>
                     </div>
-                    <a href="/teste/ebook/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #e8c97a); color: #0d0d0d; font-weight: 800; font-size: 1.05rem; padding: 16px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 32px rgba(201,168,76,0.35);">🔓 Quero o Mapa do Meu Prazer</a>
+                    <a href="/ebook/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #e8c97a); color: #0d0d0d; font-weight: 800; font-size: 1.05rem; padding: 16px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 32px rgba(201,168,76,0.35);">🔓 Quero o Mapa do Meu Prazer</a>
                 </div>
             </div>
         `
@@ -537,7 +537,7 @@ const results = {
                         <span style="text-decoration: line-through; color: #666; font-size: 0.9rem;">De R$ 97,00</span>
                         <span style="font-size: 2rem; font-weight: 900; color: #c9a84c;">R$ 29,99</span>
                     </div>
-                    <a href="/teste/ebook/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #e8c97a); color: #0d0d0d; font-weight: 800; font-size: 1.05rem; padding: 16px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 32px rgba(201,168,76,0.35);">🔓 Quero o Mapa do Meu Prazer</a>
+                    <a href="/ebook/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #e8c97a); color: #0d0d0d; font-weight: 800; font-size: 1.05rem; padding: 16px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 32px rgba(201,168,76,0.35);">🔓 Quero o Mapa do Meu Prazer</a>
                 </div>
             </div>
         `
@@ -580,7 +580,7 @@ const results = {
                         <span style="text-decoration: line-through; color: #666; font-size: 0.9rem;">De R$ 97,00</span>
                         <span style="font-size: 2rem; font-weight: 900; color: #c9a84c;">R$ 29,99</span>
                     </div>
-                    <a href="/teste/ebook/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #e8c97a); color: #0d0d0d; font-weight: 800; font-size: 1.05rem; padding: 16px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 32px rgba(201,168,76,0.35);">🔓 Quero o Mapa do Meu Prazer</a>
+                    <a href="/ebook/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #e8c97a); color: #0d0d0d; font-weight: 800; font-size: 1.05rem; padding: 16px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 32px rgba(201,168,76,0.35);">🔓 Quero o Mapa do Meu Prazer</a>
                 </div>
             </div>
         `
@@ -623,7 +623,7 @@ const results = {
                         <span style="text-decoration: line-through; color: #666; font-size: 0.9rem;">De R$ 97,00</span>
                         <span style="font-size: 2rem; font-weight: 900; color: #c9a84c;">R$ 29,99</span>
                     </div>
-                    <a href="/teste/ebook/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #e8c97a); color: #0d0d0d; font-weight: 800; font-size: 1.05rem; padding: 16px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 32px rgba(201,168,76,0.35);">🔓 Quero o Mapa do Meu Prazer</a>
+                    <a href="/ebook/" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #e8c97a); color: #0d0d0d; font-weight: 800; font-size: 1.05rem; padding: 16px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 32px rgba(201,168,76,0.35);">🔓 Quero o Mapa do Meu Prazer</a>
                 </div>
             </div>
         `
