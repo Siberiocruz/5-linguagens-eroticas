@@ -286,6 +286,15 @@ function calculateResult(answers) {
 
     console.log('Contagem de letras:', letterCounts);
 
+    // Calcular total de respostas
+    const total = Object.values(letterCounts).reduce((a, b) => a + b, 0);
+    
+    // Calcular percentuais
+    const percentages = {};
+    for (const letter in letterCounts) {
+        percentages[letter] = Math.round((letterCounts[letter] / total) * 100);
+    }
+
     // Encontrar a letra com mais votos
     let maxCount = 0;
     let resultLetter = 'A';
@@ -297,12 +306,20 @@ function calculateResult(answers) {
         }
     }
 
-    return resultLetter;
+    // Retornar objeto com resultado e percentuais
+    return {
+        letter: resultLetter,
+        percentages: percentages,
+        counts: letterCounts
+    };
 }
 
 // Mostrar resultado
-function showResult(resultLetter) {
+function showResult(resultData) {
+    const resultLetter = resultData.letter;
+    const percentages = resultData.percentages;
     console.log('Mostrando resultado para:', resultLetter);
+    console.log('Percentuais:', percentages);
     
     // Esconder quiz
     const quizSection = document.getElementById('quiz-section');
@@ -322,11 +339,58 @@ function showResult(resultLetter) {
         return;
     }
 
-    const resultData = results[resultLetter];
+    const resultInfo = results[resultLetter];
 
     const resultHeader = document.getElementById('result-header');
     if (resultHeader) {
-        resultHeader.innerHTML = resultData.description;
+        resultHeader.innerHTML = resultInfo.description;
+    }
+    
+    // Preencher conteúdo do resultado
+    const resultContent = document.getElementById('result-content');
+    if (resultContent && resultInfo.explanation) {
+        resultContent.innerHTML = resultInfo.explanation;
+    }
+    
+    // Renderizar lista de percentuais
+    const percentagesContainer = document.getElementById('result-percentages');
+    if (percentagesContainer && percentages) {
+        const profileNames = {
+            'A': '⚡ Presença',
+            'B': '🌸 Sensorial',
+            'C': '🔴 Instintiva',
+            'D': '🟣 Proibida',
+            'E': '🌈 Êxtase'
+        };
+        
+        // Ordenar percentuais em ordem decrescente
+        const sortedPercentages = Object.entries(percentages)
+            .sort((a, b) => b[1] - a[1])
+            .map(([letter, percent]) => ({
+                letter,
+                percent,
+                name: profileNames[letter]
+            }));
+        
+        let html = '<h3>Sua Distribuição de Linguagens Eróticas</h3>';
+        html += '<ul class="percentage-list">';
+        
+        for (const profile of sortedPercentages) {
+            html += `
+                <li class="percentage-item">
+                    <span class="percentage-name">${profile.name}</span>
+                    <div class="percentage-bar">
+                        <div class="percentage-fill" style="width: ${profile.percent}%"></div>
+                    </div>
+                    <span class="percentage-value">${profile.percent}%</span>
+                </li>
+            `;
+        }
+        
+        html += '</ul>';
+        html += '<p style="margin-top: 15px; font-size: 14px; color: #666; text-align: center;">Quer entender melhor cada linguagem e como integrar todas elas? <strong>Confira o e-book completo</strong> com exercícios práticos e transformações reais.</p>';
+        
+        percentagesContainer.innerHTML = html;
     }
     
     resultSection.style.display = 'block';
@@ -365,3 +429,7 @@ function resetQuiz() {
     // Scroll para topo
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// ============================================
+// FUNÇÃO PARA CRIAR GRÁFICO SVG SIMPLES
+// ============================================

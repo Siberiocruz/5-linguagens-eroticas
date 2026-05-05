@@ -374,6 +374,11 @@
                     <div class="result-header" id="result-header"></div>
                     <div class="result-content" id="result-content"></div>
                     
+                    <!-- Lista de percentuais -->
+                    <div class="result-percentages" id="result-percentages"></div>
+                    
+                </div>
+                    
                     <div class="result-institute-info">
                         <img src="instituto.jpg" alt="Instituto Sibério Cruz" class="institute-photo">
                         <div class="institute-text">
@@ -486,7 +491,70 @@
         </div>
     </footer>
 
-    <script src="quiz-data.js"></script>
-    <script src="script.js"></script>
+    <!-- CSS para percentuais -->
+    <style>
+        .result-percentages {
+            margin: 40px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .result-percentages h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .percentage-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .percentage-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .percentage-item:last-child {
+            border-bottom: none;
+        }
+        
+        .percentage-name {
+            font-weight: 600;
+            color: #333;
+            min-width: 120px;
+        }
+        
+        .percentage-bar {
+            flex: 1;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin: 0 15px;
+            overflow: hidden;
+        }
+        
+        .percentage-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #8b5cf6, #d946ef);
+            border-radius: 4px;
+        }
+        
+        .percentage-value {
+            font-weight: 700;
+            color: #8b5cf6;
+            min-width: 40px;
+            text-align: right;
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="quiz-data.js?v=8.0"></script>
+    <script src="script.js?v=8.0"></script>
     </body>
 </html>
