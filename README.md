@@ -12,8 +12,8 @@ Um quiz interativo profundo que ajuda mulheres a descobrir sua linguagem erótic
 
 ## ✨ Características
 
-✅ **Quiz com 33 Perguntas Profundas** - Identifica padrões de resposta sexual  
-✅ **5 Linguagens Eróticas** - Energético, Sensorial, Sexual, Ousado, Explorador  
+✅ **Quiz com 33 Perguntas Profundas** - Identifica padrões de resposta Instintiva  
+✅ **5 Linguagens Eróticas** - Presença, Sensorial, Instintiva, Proibido, Êxtase  
 ✅ **Resultados Personalizados** - Feedback transformador para cada perfil  
 ✅ **Formulário de Captura** - Coleta dados de forma ética  
 ✅ **Google Sheets Integrado** - Todos os leads em uma planilha  
@@ -98,7 +98,7 @@ DOMAIN=tantraemcasa.com.br
 
 ## 📊 As 5 Linguagens Eróticas
 
-### ⚡ Energético (A)
+### ⚡ Presença (A)
 - Sente prazer antes do toque
 - Ativada por olhar, presença, energia
 - Bloqueio: Dificuldade em ir além da antecipação
@@ -108,17 +108,17 @@ DOMAIN=tantraemcasa.com.br
 - Sente através dos sentidos
 - Bloqueio: Estado de alerta constante
 
-### 🔴 Sexual (C)
+### 🔴 Instintiva (C)
 - Desejo físico claro e direto
 - Responde bem ao toque intenso
 - Bloqueio: Prazer superficial, sem profundidade emocional
 
-### 🟣 Ousado (D)
+### 🟣 Proibido (D)
 - Ativada pelo proibido, diferente, provocador
 - Gosta de jogos de poder e fantasia
 - Bloqueio: Busca constante por novidade, fuga da entrega
 
-### 🌈 Explorador (E)
+### 🌈 Êxtase (E)
 - Flexível, adaptável, varia conforme o momento
 - Gosta de experimentar e descobrir
 - Bloqueio: Dispersão, falta de profundidade
@@ -211,4 +211,4 @@ WhatsApp: (18) 99666-9890
 
 ---
 
-**Desenvolvido com ❤️ para transformar vidas através do autoconhecimento sexual.**
+**Desenvolvido com ❤️ para transformar vidas através do autoconhecimento Instintiva.**

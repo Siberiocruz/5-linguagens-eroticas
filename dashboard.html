@@ -149,17 +149,17 @@
             color: #cc0066;
         }
 
-        .badge-sexual {
+        .badge-Instintiva {
             background: #ffe0d4;
             color: #cc3300;
         }
 
-        .badge-ousada {
+        .badge-Proibida {
             background: #e8d4ff;
             color: #6600cc;
         }
 
-        .badge-explorador {
+        .badge-Êxtase {
             background: #d4ffe0;
             color: #009900;
         }
@@ -242,7 +242,7 @@
                 <div class="number" id="total-leads">0</div>
             </div>
             <div class="stat-card">
-                <h3>Energético</h3>
+                <h3>Presença</h3>
                 <div class="number" id="count-energetic">0</div>
             </div>
             <div class="stat-card">
@@ -250,16 +250,16 @@
                 <div class="number" id="count-sensorial">0</div>
             </div>
             <div class="stat-card">
-                <h3>Sexual</h3>
-                <div class="number" id="count-sexual">0</div>
+                <h3>Instintiva</h3>
+                <div class="number" id="count-Instintiva">0</div>
             </div>
             <div class="stat-card">
-                <h3>Ousado</h3>
-                <div class="number" id="count-ousada">0</div>
+                <h3>Proibido</h3>
+                <div class="number" id="count-Proibida">0</div>
             </div>
             <div class="stat-card">
-                <h3>Explorador</h3>
-                <div class="number" id="count-explorador">0</div>
+                <h3>Êxtase</h3>
+                <div class="number" id="count-Êxtase">0</div>
             </div>
         </div>
 
@@ -358,35 +358,35 @@
                 total: leads.length,
                 energetic: 0,
                 sensorial: 0,
-                sexual: 0,
-                ousada: 0,
-                explorador: 0
+                Instintiva: 0,
+                Proibida: 0,
+                Êxtase: 0
             };
 
             leads.forEach(lead => {
                 const profile = lead.quizResult.toLowerCase();
                 if (profile === 'a') counts.energetic++;
                 else if (profile === 'b') counts.sensorial++;
-                else if (profile === 'c') counts.sexual++;
-                else if (profile === 'd') counts.ousada++;
-                else if (profile === 'e') counts.explorador++;
+                else if (profile === 'c') counts.Instintiva++;
+                else if (profile === 'd') counts.Proibida++;
+                else if (profile === 'e') counts.Êxtase++;
             });
 
             document.getElementById('total-leads').textContent = counts.total;
             document.getElementById('count-energetic').textContent = counts.energetic;
             document.getElementById('count-sensorial').textContent = counts.sensorial;
-            document.getElementById('count-sexual').textContent = counts.sexual;
-            document.getElementById('count-ousada').textContent = counts.ousada;
-            document.getElementById('count-explorador').textContent = counts.explorador;
+            document.getElementById('count-Instintiva').textContent = counts.Instintiva;
+            document.getElementById('count-Proibida').textContent = counts.Proibida;
+            document.getElementById('count-Êxtase').textContent = counts.Êxtase;
         }
 
         function getProfileName(letter) {
             const profiles = {
-                'A': '⚡ Energético',
+                'A': '⚡ Presença',
                 'B': '🌸 Sensorial',
-                'C': '🔴 Sexual',
-                'D': '🟣 Ousado',
-                'E': '🌈 Explorador'
+                'C': '🔴 Instintiva',
+                'D': '🟣 Proibido',
+                'E': '🌈 Êxtase'
             };
             return profiles[letter] || letter;
         }

@@ -102,7 +102,7 @@ const quizData = [
     {
         id: 9,
         section: "Onde Seu Corpo Aprendeu a Se Proteger",
-        question: "Quando você começou a ter contato com prazer ou sexualidade… qual foi a sensação predominante?",
+        question: "Quando você começou a ter contato com prazer ou Instintivaidade… qual foi a sensação predominante?",
         options: [
             { text: "Que precisava ter cuidado… como se houvesse algo perigoso ali", letter: "A" },
             { text: "Que não era totalmente seguro… havia algo de errado nisso", letter: "B" },
@@ -193,7 +193,7 @@ const quizData = [
             { text: "Me entregar completamente sem pensar… sem controlar", letter: "A" },
             { text: "Relaxar profundamente sem travar… sem defesas", letter: "B" },
             { text: "Sentir algo muito mais intenso… muito mais real", letter: "C" },
-            { text: "Explorar lados meus que nunca mostrei… ser mais ousada", letter: "D" },
+            { text: "Explorar lados meus que nunca mostrei… ser mais Proibida", letter: "D" },
             { text: "Viver tudo isso com liberdade total… sem limites", letter: "E" }
         ]
     },
@@ -224,7 +224,7 @@ const quizData = [
     {
         id: 19,
         section: "O Que Você Deseja, Mas Não Acessa",
-        question: "Qual é o seu maior sonho quando se trata de prazer e sexualidade?",
+        question: "Qual é o seu maior sonho quando se trata de prazer e Instintivaidade?",
         options: [
             { text: "Viver a antecipação… aquele estado de presença total", letter: "A" },
             { text: "Estar completamente segura e acolhida… sem defesas", letter: "B" },
@@ -248,7 +248,7 @@ const quizData = [
     {
         id: 21,
         section: "O Que Você Deseja, Mas Não Acessa",
-        question: "Quando você pensa em sua sexualidade… qual é a primeira emoção que surge?",
+        question: "Quando você pensa em sua Instintivaidade… qual é a primeira emoção que surge?",
         options: [
             { text: "Ansiedade… medo de não conseguir", letter: "A" },
             { text: "Insegurança… medo de não ser o suficiente", letter: "B" },
@@ -322,7 +322,7 @@ const quizData = [
     {
         id: 27,
         section: "Integração e Transformação",
-        question: "Quando você imagina uma transformação real em sua sexualidade… como seria?",
+        question: "Quando você imagina uma transformação real em sua Instintivaidade… como seria?",
         options: [
             { text: "Eu seria mais presente… mais conectada", letter: "A" },
             { text: "Eu seria mais relaxada… menos defensiva", letter: "B" },
@@ -364,13 +364,13 @@ const quizData = [
             { text: "Desbloquear meu corpo… conseguir relaxar", letter: "B" },
             { text: "Sentir prazer de verdade… profundamente", letter: "C" },
             { text: "Me libertar de culpas… de vergonha", letter: "D" },
-            { text: "Explorar minha sexualidade… com segurança", letter: "E" }
+            { text: "Explorar minha Instintivaidade… com segurança", letter: "E" }
         ]
     },
     {
         id: 31,
         section: "Integração e Transformação",
-        question: "Qual é o seu maior desejo quando se trata de sua jornada sexual?",
+        question: "Qual é o seu maior desejo quando se trata de sua jornada Instintiva?",
         options: [
             { text: "Viver a presença… a conexão real", letter: "A" },
             { text: "Viver o relaxamento… a paz no corpo", letter: "B" },
@@ -382,7 +382,7 @@ const quizData = [
     {
         id: 32,
         section: "Integração e Transformação",
-        question: "O que você acredita que merece quando se trata de prazer e sexualidade?",
+        question: "O que você acredita que merece quando se trata de prazer e Instintivaidade?",
         options: [
             { text: "Mereco ser sentida… ser vista", letter: "A" },
             { text: "Mereco estar segura… ser acolhida", letter: "B" },
@@ -408,13 +408,13 @@ const quizData = [
 // Resultados personalizados para cada linguagem erótica
 const results = {
     A: {
-        name: "Energético",
+        name: "Presença",
         emoji: "⚡",
         color: "#5b9bd5",
         description: `
             <div class="result-header">
                 <div class="result-emoji">⚡</div>
-                <h2 class="result-title">Seu Resultado: Perfil Energético</h2>
+                <h2 class="result-title">Seu Resultado: Perfil Presença</h2>
                 <p class="result-subtitle">Você sente prazer de forma sutil… antes mesmo do toque.</p>
             </div>
             <div class="result-content">
@@ -493,13 +493,13 @@ const results = {
         `
     },
     C: {
-        name: "Sexual",
+        name: "Instintiva",
         emoji: "🔴",
         color: "#d94a38",
         description: `
             <div class="result-header">
                 <div class="result-emoji">🔴</div>
-                <h2 class="result-title">Seu Resultado: Perfil Sexual</h2>
+                <h2 class="result-title">Seu Resultado: Perfil Instintiva</h2>
                 <p class="result-subtitle">Seu corpo responde ao estímulo direto. Você tem facilidade de sentir… quando existe intensidade.</p>
             </div>
             <div class="result-content">
@@ -527,13 +527,13 @@ const results = {
         `
     },
     D: {
-        name: "Ousado",
+        name: "Proibido",
         emoji: "🟣",
         color: "#9b59b6",
         description: `
             <div class="result-header">
                 <div class="result-emoji">🟣</div>
-                <h2 class="result-title">Seu Resultado: Perfil Ousado</h2>
+                <h2 class="result-title">Seu Resultado: Perfil Proibido</h2>
                 <p class="result-subtitle">Você se ativa pelo diferente. Pelo proibido. Pelo que foge do padrão.</p>
             </div>
             <div class="result-content">
@@ -563,13 +563,13 @@ const results = {
         `
     },
     E: {
-        name: "Explorador",
+        name: "Êxtase",
         emoji: "🌈",
         color: "#2ecc71",
         description: `
             <div class="result-header">
                 <div class="result-emoji">🌈</div>
-                <h2 class="result-title">Seu Resultado: Perfil Explorador</h2>
+                <h2 class="result-title">Seu Resultado: Perfil Êxtase</h2>
                 <p class="result-subtitle">Você é aberto, curioso, adaptável. Gosta de variar. Experimentar. Descobrir.</p>
             </div>
             <div class="result-content">

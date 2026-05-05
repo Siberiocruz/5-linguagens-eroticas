@@ -15,9 +15,9 @@
     
     --color-energetic: #5b9bd5;
     --color-sensorial: #e8b4d4;
-    --color-sexual: #d94a38;
-    --color-ousada: #9b59b6;
-    --color-explorador: #2ecc71;
+    --color-Instintiva: #d94a38;
+    --color-Proibida: #9b59b6;
+    --color-Êxtase: #2ecc71;
 }
 
 * {
@@ -371,16 +371,16 @@ body {
     border-top-color: var(--color-sensorial);
 }
 
-.language-card.sexual {
-    border-top-color: var(--color-sexual);
+.language-card.Instintiva {
+    border-top-color: var(--color-Instintiva);
 }
 
-.language-card.ousada {
-    border-top-color: var(--color-ousada);
+.language-card.Proibida {
+    border-top-color: var(--color-Proibida);
 }
 
-.language-card.explorador {
-    border-top-color: var(--color-explorador);
+.language-card.Êxtase {
+    border-top-color: var(--color-Êxtase);
 }
 
 .language-header {
