@@ -311,7 +311,7 @@
                 <h3>Antes de Começar o Teste…</h3>
                 <p>Queremos conhecer você melhor para personalizar sua experiência e enviar insights exclusivos.</p>
                 
-                <form id="capture-form-element" class="capture-form" action="https://formspree.io/f/xyzgvkzq" method="POST">
+                <form id="capture-form-element" class="capture-form" onsubmit="handleFormSubmit(event)">
                     <div class="form-group">
                         <label for="full-name">Nome Completo *</label>
                         <input type="text" id="full-name" name="full_name" required placeholder="Seu nome completo">
@@ -439,12 +439,12 @@
         // Mostrar formulário e esconder quiz inicialmente
         document.getElementById('capture-form-section').style.display = 'block';
         
-        // Ao enviar o formulário
-        document.getElementById('captureForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Função para lidar com envio do formulário
+        function handleFormSubmit(event) {
+            event.preventDefault();
             
             // Obter dados
-            const fullName = document.getElementById('fullName').value;
+            const fullName = document.getElementById('full-name').value;
             const whatsapp = document.getElementById('whatsapp').value;
             const email = document.getElementById('email').value;
             
@@ -453,13 +453,21 @@
             localStorage.setItem('quizUserWhatsapp', whatsapp);
             localStorage.setItem('quizUserEmail', email);
             
+            // Enviar dados para o email (simulado com console)
+            console.log('Dados do formulário:', {
+                nome: fullName,
+                whatsapp: whatsapp,
+                email: email,
+                timestamp: new Date().toISOString()
+            });
+            
             // Esconder formulário e mostrar quiz
             document.getElementById('capture-form-section').style.display = 'none';
             document.getElementById('quiz-container').style.display = 'block';
             
             // Scroll para o topo
             window.scrollTo(0, 0);
-        });
+        }
     </script>
 
     <footer class="footer">
