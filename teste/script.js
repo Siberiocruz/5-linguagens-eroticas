@@ -349,6 +349,12 @@ function showResult(resultData) {
         resultField.value = resultInfo.name || resultLetter;
         console.log('Resultado preenchido:', resultField.value);
     }
+    
+    // Atualizar resultado no Supabase se temos dados do usuário
+    if (userData && userData.email) {
+        const nomeResultado = resultInfo.name || resultLetter;
+        atualizarResultadoSupabase(userData.email, nomeResultado);
+    }
 
     const resultHeader = document.getElementById('result-header');
     if (resultHeader) {
@@ -413,6 +419,43 @@ function showResult(resultData) {
     setTimeout(() => {
         resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 100);
+}
+
+// ============================================
+// FUNÇÃO PARA ATUALIZAR RESULTADO NO SUPABASE
+// ============================================
+async function atualizarResultadoSupabase(email, resultado) {
+    try {
+        console.log('📤 Atualizando resultado no Supabase para:', email, '->', resultado);
+        
+        const response = await fetch(
+            `${SUPABASE_URL}/rest/v1/formularios?email=eq.${encodeURIComponent(email)}&order=id.desc&limit=1`,
+            {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': SUPABASE_ANON_KEY,
+                    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify({
+                    resultado: resultado
+                })
+            }
+        );
+
+        if (response.ok) {
+            console.log('✅ Resultado atualizado com sucesso no Supabase!');
+            return { sucesso: true };
+        } else {
+            const erro = await response.text();
+            console.error('❌ Erro ao atualizar resultado:', erro);
+            return { sucesso: false };
+        }
+    } catch (error) {
+        console.error('❌ Erro de conexão ao atualizar resultado:', error);
+        return { sucesso: false };
+    }
 }
 
 // Resetar quiz
