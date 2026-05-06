@@ -27,7 +27,7 @@ function initCaptureForm() {
 // ============================================
 // FUNÇÃO PARA ENVIAR DADOS PARA SUPABASE
 // ============================================
-async function enviarParaSupabase(nome, whatsapp, email) {
+async function enviarParaSupabase(nome, whatsapp, email, resultado = '') {
     try {
         console.log('📤 Enviando dados para Supabase...');
         
@@ -43,7 +43,8 @@ async function enviarParaSupabase(nome, whatsapp, email) {
                 body: JSON.stringify({
                     nome: nome,
                     whatsapp: whatsapp,
-                    email: email
+                    email: email,
+                    resultado: resultado
                 })
             }
         );
@@ -71,13 +72,14 @@ function handleCaptureSubmit(e) {
     userData = {
         fullName: document.getElementById('full-name').value,
         whatsapp: document.getElementById('whatsapp').value,
-        email: document.getElementById('email').value
+        email: document.getElementById('email').value,
+        resultado: document.getElementById('result-field').value || ''
     };
 
     console.log('Dados capturados:', userData);
     
     // Enviar para Supabase
-    enviarParaSupabase(userData.fullName, userData.whatsapp, userData.email)
+    enviarParaSupabase(userData.fullName, userData.whatsapp, userData.email, userData.resultado)
         .then(resultado => {
             if (resultado.sucesso) {
                 console.log('✅ Dados salvos no Supabase!');
@@ -340,6 +342,13 @@ function showResult(resultData) {
     }
 
     const resultInfo = results[resultLetter];
+    
+    // Preencher o campo hidden com o resultado
+    const resultField = document.getElementById('result-field');
+    if (resultField) {
+        resultField.value = resultInfo.name || resultLetter;
+        console.log('Resultado preenchido:', resultField.value);
+    }
 
     const resultHeader = document.getElementById('result-header');
     if (resultHeader) {

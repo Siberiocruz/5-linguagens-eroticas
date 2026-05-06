@@ -394,6 +394,7 @@
                         <th>Nome</th>
                         <th>Email</th>
                         <th>WhatsApp</th>
+                        <th>Resultado</th>
                         <th>Data</th>
                     </tr>
                 </thead>
@@ -524,6 +525,7 @@
                     <td>${escapeHtml(item.nome)}</td>
                     <td><a href="mailto:${item.email}" class="email-link">${item.email}</a></td>
                     <td><a href="https://wa.me/${item.whatsapp.replace(/\D/g, '')}" target="_blank" class="whatsapp-link">📱 ${item.whatsapp}</a></td>
+                    <td>${escapeHtml(item.resultado || '-')}</td>
                     <td><span class="date-badge">${date}</span></td>
                 `;
 
