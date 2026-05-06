@@ -346,13 +346,7 @@ function showResult(resultData) {
         resultHeader.innerHTML = resultInfo.description;
     }
     
-    // Preencher conteúdo do resultado
-    const resultContent = document.getElementById('result-content');
-    if (resultContent && resultInfo.explanation) {
-        resultContent.innerHTML = resultInfo.explanation;
-    }
-    
-    // Renderizar lista de percentuais
+    // Renderizar lista de percentuais PRIMEIRO
     const percentagesContainer = document.getElementById('result-percentages');
     if (percentagesContainer && percentages) {
         const profileNames = {
@@ -387,10 +381,16 @@ function showResult(resultData) {
             `;
         }
         
-        html += '</ul>';
-        html += '<p style="margin-top: 15px; font-size: 14px; color: #666; text-align: center;">Quer entender melhor cada linguagem e como integrar todas elas? <strong>Confira o e-book completo</strong> com exercícios práticos e transformações reais.</p>';
-        
+         html += '</ul>';
+        html += '<p style="margin-top: 20px; text-align: center; font-size: 14px; color: #666;">Quer entender melhor cada linguagem e como integrar todas elas? <strong>Confira o e-book completo</strong> com exercícios práticos e transformações reais.</p>';
         percentagesContainer.innerHTML = html;
+    }
+    
+    // Preencher conteúdo do resultado DEPOIS
+    const resultContent = document.getElementById('result-content');
+    if (resultContent && resultInfo.explanation) {
+        resultContent.innerHTML = resultInfo.explanation;
+    }l;
     }
     
     resultSection.style.display = 'block';
