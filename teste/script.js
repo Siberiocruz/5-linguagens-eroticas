@@ -399,7 +399,6 @@ function showResult(resultData) {
     const resultContent = document.getElementById('result-content');
     if (resultContent && resultInfo.explanation) {
         resultContent.innerHTML = resultInfo.explanation;
-    }l;
     }
     
     resultSection.style.display = 'block';
