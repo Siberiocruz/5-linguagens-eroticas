@@ -102,7 +102,7 @@ const quizData = [
     {
         id: 9,
         section: "Onde Seu Corpo Aprendeu a Se Proteger",
-        question: "Quando você começou a ter contato com prazer ou Instintivaidade… qual foi a sensação predominante?",
+        question: "Quando você começou a ter contato com prazer ou Sexualidade… qual foi a sensação predominante?",
         options: [
             { text: "Que precisava ter cuidado… como se houvesse algo perigoso ali", letter: "A" },
             { text: "Que não era totalmente seguro… havia algo de errado nisso", letter: "B" },
@@ -224,7 +224,7 @@ const quizData = [
     {
         id: 19,
         section: "O Que Você Deseja, Mas Não Acessa",
-        question: "Qual é o seu maior sonho quando se trata de prazer e Instintivaidade?",
+        question: "Qual é o seu maior sonho quando se trata de prazer e Sexualidade?",
         options: [
             { text: "Viver a antecipação… aquele estado de presença total", letter: "A" },
             { text: "Estar completamente segura(o) e acolhida(o)… sem defesas", letter: "B" },
@@ -248,7 +248,7 @@ const quizData = [
     {
         id: 21,
         section: "O Que Você Deseja, Mas Não Acessa",
-        question: "Quando você pensa em sua Instintivaidade… qual é a primeira emoção que surge?",
+        question: "Quando você pensa em sua Sexualidade… qual é a primeira emoção que surge?",
         options: [
             { text: "Ansiedade… medo de não conseguir", letter: "A" },
             { text: "Insegurança… medo de não ser o suficiente", letter: "B" },
@@ -322,7 +322,7 @@ const quizData = [
     {
         id: 27,
         section: "Integração e Transformação",
-        question: "Quando você imagina uma transformação real em sua Instintivaidade… como seria?",
+        question: "Quando você imagina uma transformação real em sua Sexualidade… como seria?",
         options: [
             { text: "Eu seria mais presente… mais conectada(o)", letter: "A" },
             { text: "Eu seria mais relaxada… menos defensiva", letter: "B" },
@@ -364,7 +364,7 @@ const quizData = [
             { text: "Desbloquear meu corpo… conseguir relaxar", letter: "B" },
             { text: "Sentir prazer de verdade… profundamente", letter: "C" },
             { text: "Me libertar de culpas… de vergonha", letter: "D" },
-            { text: "Explorar minha Instintivaidade… com segurança", letter: "E" }
+            { text: "Explorar minha Sexualidade… com segurança", letter: "E" }
         ]
     },
     {
@@ -382,7 +382,7 @@ const quizData = [
     {
         id: 32,
         section: "Integração e Transformação",
-        question: "O que você acredita que merece quando se trata de prazer e Instintivaidade?",
+        question: "O que você acredita que merece quando se trata de prazer e Sexualidade?",
         options: [
             { text: "Mereco ser sentida… ser vista(o)", letter: "A" },
             { text: "Mereco estar segura(o)… ser acolhida(o)", letter: "B" },
