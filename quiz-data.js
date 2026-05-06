@@ -7,7 +7,7 @@ const quizData = [
         question: "Quando você imagina um momento de prazer que realmente te tocaria profundamente… o que mais mexe com você?",
         options: [
             { text: "Aquele silêncio carregado antes do toque… o olhar que diz tudo sem dizer nada", letter: "A" },
-            { text: "Um ambiente onde você se sente completamente segura, acolhida, sem precisar se defender", letter: "B" },
+            { text: "Um ambiente onde você se sente completamente segura(o), acolhida(o), sem precisar se defender", letter: "B" },
             { text: "A intensidade do encontro… o contato direto, sem filtros, sem rodeios", letter: "C" },
             { text: "A provocação… o jogo… a sensação de estar vivendo algo fora do comum", letter: "D" },
             { text: "A liberdade de poder sentir sem regras, sem precisar se encaixar em nada", letter: "E" }
@@ -18,7 +18,7 @@ const quizData = [
         section: "Como Seu Corpo Aprendeu a Sentir",
         question: "Quando alguém começa a se aproximar de você com intenção, o que acontece dentro do seu corpo?",
         options: [
-            { text: "Você já começa a sentir algo antes mesmo de ser tocada", letter: "A" },
+            { text: "Você já começa a sentir algo antes mesmo de ser tocada(o)", letter: "A" },
             { text: "Seu corpo observa primeiro… como se precisasse ter certeza de que está seguro", letter: "B" },
             { text: "Você responde rápido, sente o calor subir", letter: "C" },
             { text: "Sua mente entra no jogo, começa a imaginar possibilidades", letter: "D" },
@@ -40,7 +40,7 @@ const quizData = [
     {
         id: 4,
         section: "Como Seu Corpo Aprendeu a Sentir",
-        question: "Quando você já esteve realmente conectada com o prazer… o que tinha naquele momento?",
+        question: "Quando você já esteve realmente conectada(o) com o prazer… o que tinha naquele momento?",
         options: [
             { text: "Uma construção lenta… quase hipnótica", letter: "A" },
             { text: "Um cuidado com cada detalhe… como se tudo estivesse te acolhendo", letter: "B" },
@@ -52,10 +52,10 @@ const quizData = [
     {
         id: 5,
         section: "Como Seu Corpo Aprendeu a Sentir",
-        question: "Se você for sincera, qual dessas frases descreve melhor seu padrão?",
+        question: "Se você for sincera(o), qual dessas frases descreve melhor seu padrão?",
         options: [
             { text: "Eu sinto muito… mas às vezes não consigo ir até o final disso", letter: "A" },
-            { text: "Eu preciso me sentir segura… senão meu corpo não responde", letter: "B" },
+            { text: "Eu preciso me sentir segura(o)… senão meu corpo não responde", letter: "B" },
             { text: "Eu sinto… mas às vezes parece superficial", letter: "C" },
             { text: "Eu preciso de algo a mais… o básico não me prende", letter: "D" },
             { text: "Eu sinto de várias formas… mas nada se aprofunda tanto", letter: "E" }
@@ -66,7 +66,7 @@ const quizData = [
         section: "Como Seu Corpo Aprendeu a Sentir",
         question: "Qual é a sua relação com o próprio corpo no dia a dia?",
         options: [
-            { text: "Sinto uma presença constante… como se estivesse sempre conectada", letter: "A" },
+            { text: "Sinto uma presença constante… como se estivesse sempre conectada(o)", letter: "A" },
             { text: "Preciso de um espaço seguro para realmente habitar meu corpo", letter: "B" },
             { text: "Sinto meu corpo principalmente quando há intensidade", letter: "C" },
             { text: "Meu corpo é um espaço de exploração… sempre há algo novo", letter: "D" },
@@ -79,7 +79,7 @@ const quizData = [
         question: "Quando você se toca… o que você sente?",
         options: [
             { text: "Uma conexão sutil… como se estivesse dialogando comigo mesma", letter: "A" },
-            { text: "Preciso de um contexto seguro para isso… sozinha fico tensa", letter: "B" },
+            { text: "Preciso de um contexto seguro para isso… sozinha(o) fico tensa(o)", letter: "B" },
             { text: "Sinto desejo físico claro e direto", letter: "C" },
             { text: "Sinto curiosidade… vontade de explorar novas sensações", letter: "D" },
             { text: "Depende do dia… às vezes é relaxante, às vezes é exploratório", letter: "E" }
@@ -153,7 +153,7 @@ const quizData = [
         question: "Como você se sente quando alguém quer se aproximar de você com intimidade?",
         options: [
             { text: "Sinto uma antecipação… mas também um pouco de ansiedade", letter: "A" },
-            { text: "Preciso de tempo para me sentir segura… não gosto de surpresas", letter: "B" },
+            { text: "Preciso de tempo para me sentir segura(o)… não gosto de surpresas", letter: "B" },
             { text: "Sinto desejo físico, mas às vezes falta conexão emocional", letter: "C" },
             { text: "Sinto curiosidade… mas também uma certa resistência", letter: "D" },
             { text: "Depende… às vezes me abro, às vezes me fecho", letter: "E" }
@@ -176,7 +176,7 @@ const quizData = [
         section: "Onde Seu Corpo Aprendeu a Se Proteger",
         question: "Quando você está em um momento íntimo e algo não está certo… o que você faz?",
         options: [
-            { text: "Fico tensa e meu corpo desliga… fico observando de fora", letter: "A" },
+            { text: "Fico tensa(o) e meu corpo desliga… fico observando de fora", letter: "A" },
             { text: "Meu corpo trava… fico rígida", letter: "B" },
             { text: "Continuo, mas sinto que falta algo… que não é o suficiente", letter: "C" },
             { text: "Fico julgando a situação… o que está acontecendo", letter: "D" },
@@ -227,7 +227,7 @@ const quizData = [
         question: "Qual é o seu maior sonho quando se trata de prazer e Instintivaidade?",
         options: [
             { text: "Viver a antecipação… aquele estado de presença total", letter: "A" },
-            { text: "Estar completamente segura e acolhida… sem defesas", letter: "B" },
+            { text: "Estar completamente segura(o) e acolhida(o)… sem defesas", letter: "B" },
             { text: "Sentir intensidade real… sem limites", letter: "C" },
             { text: "Ser completamente livre… explorar tudo que quero", letter: "D" },
             { text: "Viver tudo com autenticidade… sem máscaras", letter: "E" }
@@ -238,8 +238,8 @@ const quizData = [
         section: "O Que Você Deseja, Mas Não Acessa",
         question: "O que você imagina que poderia mudar se você tivesse acesso total ao seu prazer?",
         options: [
-            { text: "Eu seria mais presente… mais conectada comigo mesma", letter: "A" },
-            { text: "Eu seria mais relaxada… menos tensa no dia a dia", letter: "B" },
+            { text: "Eu seria mais presente… mais conectada(o) comigo mesma", letter: "A" },
+            { text: "Eu seria mais relaxada… menos tensa(o) no dia a dia", letter: "B" },
             { text: "Eu sentiria mais viva… mais real", letter: "C" },
             { text: "Eu seria mais autêntica… mais eu mesma", letter: "D" },
             { text: "Eu teria mais liberdade… menos limitações", letter: "E" }
@@ -262,11 +262,11 @@ const quizData = [
         section: "O Que Você Deseja, Mas Não Acessa",
         question: "Se você pudesse conversar com seu corpo… o que ele te diria?",
         options: [
-            { text: "'Eu quero ser sentida… não controlada'", letter: "A" },
+            { text: "'Eu quero ser sentida… não controlada(o)'", letter: "A" },
             { text: "'Eu preciso de segurança… para realmente me abrir'", letter: "B" },
             { text: "'Eu quero mais… quero ser desejada'", letter: "C" },
             { text: "'Eu quero explorar… sem julgamento'", letter: "D" },
-            { text: "'Eu quero liberdade… para ser eu mesma'", letter: "E" }
+            { text: "'Eu quero liberdade… para ser eu mesma(o)'", letter: "E" }
         ]
     },
 
@@ -279,8 +279,8 @@ const quizData = [
             { text: "Medo de perder o controle… de não saber o que vai acontecer", letter: "A" },
             { text: "Medo de não ser seguro… de ser machucada", letter: "B" },
             { text: "Medo de não ser o suficiente… de decepcionar", letter: "C" },
-            { text: "Medo de ser julgada… de ser vista como errada", letter: "D" },
-            { text: "Medo de ficar presa… de perder liberdade", letter: "E" }
+            { text: "Medo de ser julgada(o)… de ser vista(o) como errada", letter: "D" },
+            { text: "Medo de ficar presa(o)… de perder liberdade", letter: "E" }
         ]
     },
     {
@@ -292,7 +292,7 @@ const quizData = [
             { text: "Segura… protegida… confortável", letter: "B" },
             { text: "Desejada… intensa… poderosa", letter: "C" },
             { text: "Livre… autêntica… sem limites", letter: "D" },
-            { text: "Exploratória… curiosa… aventureira", letter: "E" }
+            { text: "Exploratória… curiosa(o)… aventureira", letter: "E" }
         ]
     },
     {
@@ -313,7 +313,7 @@ const quizData = [
         question: "Qual é a sua relação com a entrega?",
         options: [
             { text: "Tenho medo… sinto que vou perder o controle", letter: "A" },
-            { text: "Preciso de muito tempo para me sentir segura o suficiente", letter: "B" },
+            { text: "Preciso de muito tempo para me sentir segura(o) o suficiente", letter: "B" },
             { text: "Sinto que não consigo me entregar completamente", letter: "C" },
             { text: "Tenho dificuldade em me entregar sem julgamento", letter: "D" },
             { text: "Minha entrega varia… depende da situação", letter: "E" }
@@ -324,7 +324,7 @@ const quizData = [
         section: "Integração e Transformação",
         question: "Quando você imagina uma transformação real em sua Instintivaidade… como seria?",
         options: [
-            { text: "Eu seria mais presente… mais conectada", letter: "A" },
+            { text: "Eu seria mais presente… mais conectada(o)", letter: "A" },
             { text: "Eu seria mais relaxada… menos defensiva", letter: "B" },
             { text: "Eu sentiria mais profundamente… mais intensamente", letter: "C" },
             { text: "Eu seria mais livre… mais autêntica", letter: "D" },
@@ -349,10 +349,10 @@ const quizData = [
         question: "Qual é a sua verdadeira necessidade emocional quando se trata de prazer?",
         options: [
             { text: "Ser vista… ser reconhecida", letter: "A" },
-            { text: "Ser acolhida… ser protegida", letter: "B" },
+            { text: "Ser acolhida(o)… ser protegida", letter: "B" },
             { text: "Ser desejada… ser intensamente sentida", letter: "C" },
             { text: "Ser aceita… ser amada como sou", letter: "D" },
-            { text: "Ser livre… ser autêntica", letter: "E" }
+            { text: "Ser livre… ser autêntica(o)", letter: "E" }
         ]
     },
     {
@@ -384,10 +384,10 @@ const quizData = [
         section: "Integração e Transformação",
         question: "O que você acredita que merece quando se trata de prazer e Instintivaidade?",
         options: [
-            { text: "Mereco ser sentida… ser vista", letter: "A" },
-            { text: "Mereco estar segura… ser acolhida", letter: "B" },
+            { text: "Mereco ser sentida… ser vista(o)", letter: "A" },
+            { text: "Mereco estar segura(o)… ser acolhida(o)", letter: "B" },
             { text: "Mereco sentir intensidade… ser desejada", letter: "C" },
-            { text: "Mereco ser livre… ser autêntica", letter: "D" },
+            { text: "Mereco ser livre… ser autêntica(o)", letter: "D" },
             { text: "Mereco explorar… descobrir… experimentar", letter: "E" }
         ]
     },
